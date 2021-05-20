@@ -1,5 +1,6 @@
 const initialeState = {
- items: []
+ items: [],
+ isLoaded: false
 };
 
 const pizzas = (state = initialeState, action) => {
