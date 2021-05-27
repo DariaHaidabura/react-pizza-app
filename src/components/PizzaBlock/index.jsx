@@ -2,14 +2,14 @@ import React from 'react'
 import classNames from 'classnames'
 import PropTypes from 'prop-types';
 
-
-function PizzaBlock({ name,imageUrl,price,types,sizes }) {
+function PizzaBlock({ name, imageUrl, price, types, sizes }) {
   const availableTypes = ['тонкое', 'традиционное'];
   const availableSizes = [26, 30, 40];
+  
   const [activeType, setActiveType] = React.useState(types[0]);
   const [activeSize, setActiveSize] = React.useState(sizes[0]);
 
-
+ 
   const onSelectType =(index) => { 
     setActiveType(index)
   };
@@ -80,14 +80,14 @@ PizzaBlock.propTypes = {
   imageUrl: PropTypes.string,
   price: PropTypes.number,
   types: PropTypes.arrayOf(PropTypes.number),
-  sizes: PropTypes.arrayOf(PropTypes.number),
+  sizes: PropTypes.arrayOf(PropTypes.number) 
 };
 
 PizzaBlock.defaultProps = {
   name: '---',
   price: 0,
   types: [],
-  sizes: [],
+  sizes: [] 
 }
 
 export default PizzaBlock;
